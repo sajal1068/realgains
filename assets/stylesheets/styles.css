@@ -410,31 +410,82 @@ body.dark {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(53, 211, 117, 0.35);
 }
+/* ==========================================================================
+   Premium Velvet Green & Gold Node Buttons (Reference Image Match)
+   ========================================================================== */
+
+/* --- Primary: Get Started --- */
 .custom-hero-primary-btn {
-    background-color: #CCA34B;
-    color: #0F1520 !important;
-    font-size: 12px;
-    border: 1px solid #CCA34B;
-    transition: all 0.2s ease-in-out;
-}
-.custom-hero-primary-btn:hover {
-    background-color: #E6C36A;
-    border-color: #E6C36A;
-    transform: scale(1.02);
-}
-.custom-hero-secondary-btn {
-    background-color: #151D2A;
-    color: #ffffff !important;
-    font-size: 12px;
-    border: 1px solid rgba(138, 153, 173, 0.2);
-    transition: all 0.2s ease-in-out;
-}
-.custom-hero-secondary-btn:hover {
-    background-color: #1A2435;
-    border-color: #E6C36A;
+    /* Deep Emerald Velvet Green Background with a premium vertical layout gradient */
+    background: linear-gradient(180deg, #06321F 0%, #031F13 100%) !important;
+    
+    /* Perfect Thin Metallic Luxury Gold Border Outline */
+    border: 1px solid #E6C36A !important;
     color: #E6C36A !important;
-    transform: scale(1.02);
+    
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em !important;
+    padding: 10px 28px !important;
+    border-radius: 8px !important; /* Elegant capsule radius as seen in image_ae9b49.png */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    
+    /* Hardware-Accelerated Dynamic Vector Engine */
+    will-change: transform, box-shadow, background;
+    transition: 
+        transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+        box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+        background 0.3s ease;
 }
+
+/* Subtle Matrix Glow under the primary button on hover */
+.custom-hero-primary-btn:hover {
+    background: linear-gradient(180deg, #09472B 0%, #05321F 100%) !important; /* Illuminates internal green slightly */
+    transform: translateY(-2px);
+    
+    /* Cyber Gold Ambient Drop-Glow Protection */
+    box-shadow: 0 6px 20px rgba(230, 195, 106, 0.15) !important;
+}
+
+
+/* --- Secondary: Open Account --- */
+.custom-hero-secondary-btn {
+    /* Matching the secondary look with identical Emerald canvas base mapping */
+    background: linear-gradient(180deg, #06321F 0%, #031F13 100%) !important;
+    border: 1px solid #E6C36A !important;
+    color: #E6C36A !important;
+    
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em !important;
+    padding: 10px 28px !important;
+    border-radius: 8px !important;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    
+    will-change: transform, box-shadow, filter;
+    transition: 
+        transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+        box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+        filter 0.3s ease;
+}
+
+/* WOW Interactive Variant: Color Flip Reveal Effect on Hover */
+.custom-hero-secondary-btn:hover {
+    transform: translateY(-2px);
+    
+    /* Sweeps the background behavior cleanly to Tech Mint Green tint */
+    background: linear-gradient(180deg, #053D24 0%, #35D375 100%) !important;
+    color: #0F1520 !important; /* Inverts text to dark canvas tone for sharp visibility */
+    border-color: #35D375 !important; /* Border flashes mint tech green */
+    
+    box-shadow: 0 6px 20px rgba(53, 211, 117, 0.2) !important;
+}
+
+/* button */
 .gap-2\.5 {
     gap: 0.65rem !important;
 }
@@ -1626,7 +1677,7 @@ section {background: var(--light-color);}
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: var(--color-primary);
+    color: var(--rg-gold-card);
   }
 
   .navbar .dropdown ul {
@@ -2356,6 +2407,7 @@ section {background: var(--light-color);}
     position: static;
     left: auto;
   }
+  
 }
 
 
