@@ -1,0 +1,339 @@
+
+
+:root {
+    --brand-dark: #0F1520;      /* Deep Cyber Space Background */
+    --brand-surface: #151D2A;   /* Card Surface Layer */
+    --brand-gold: #E6C36A;      /* Premium Gold Accent */
+    --brand-green: #35D375;     /* Logo Mint Cyber Green */
+    --brand-muted: #8A99AD;     /* Dull Technical Subtitles */
+}
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--brand-dark);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(53, 211, 117, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(230, 195, 106, 0.05) 0%, transparent 40%);
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Card Frame with Glow Effect */
+        .login-card {
+            background: rgba(21, 29, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-top: 3px solid var(--brand-green);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 40px rgba(53, 211, 117, 0.03);
+            transition: all 0.3s ease-in-out;
+            max-width: 480px;
+            width: 100%;
+        }
+
+        .login-card:hover {
+            border-top-color: var(--brand-gold);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 40px rgba(230, 195, 106, 0.05);
+        }
+
+        /* Form Controls Redesign */
+        .form-label {
+            font-size: 11px;
+            font-family: monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--brand-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .input-group-text {
+            background-color: rgba(15, 21, 32, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--brand-muted);
+            border-radius: 12px 0 0 12px;
+        }
+
+        .form-control {
+            background-color: rgba(15, 21, 32, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #ffffff !important;
+            border-radius: 12px;
+            font-size: 14px;
+            padding: 0.65rem 1rem;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .form-control:focus {
+            background-color: rgba(15, 21, 32, 0.9);
+            border-color: rgba(53, 211, 117, 0.4);
+            box-shadow: 0 0 10px rgba(53, 211, 117, 0.1);
+        }
+
+        .form-control::placeholder {
+            color: rgba(138, 153, 173, 0.4);
+        }
+
+        /* Custom Password group logic */
+        .has-left-icon .form-control {
+            border-radius: 0 12px 12px 0;
+        }
+
+        /* Captcha Security Box Styles */
+        .captcha-box {
+            background: #000000;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 900;
+            font-size: 20px;
+            letter-spacing: 4px;
+            padding: 0.5rem 1.2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+            user-select: none;
+        }
+
+        /* Action Links styling */
+        .auth-link {
+            font-size: 11px;
+            color: var(--brand-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .auth-link:hover {
+            color: var(--brand-gold);
+        }
+
+        
+        /* ==========================================================================
+   ULTRA-PREMIUM KINETIC BUTTON ARCHITECTURE (WOW EFFECT)
+   ========================================================================== --> */
+.btn-login-container {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-login {
+    position: relative;
+    background: linear-gradient(135deg, var(--brand-green) 0%, #10b981 50%, var(--brand-gold) 100%);
+    background-size: 200% auto;
+    color: #000000 !important;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+    padding: 0.85rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 20px rgba(53, 211, 117, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+}
+
+/* Glowing Aura Layer behind the button */
+.btn-login::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-green) 100%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+/* Futuristic Reflection Flare (Light Sweep Effect) */
+.btn-login::after {
+    content: '';
+    position: absolute;
+    top: -50%; left: -60%; width: 30%; height: 200%;
+    background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+    transform: rotate(25deg);
+    transition: none;
+}
+
+/* ==========================================================================
+   INTERACTIVE HOVER STATES STATE MATRICES
+   ========================================================================== */
+.btn-login:hover {
+    background-position: right center; /* Shifts the gradient colors smoothly */
+    color: #000000 !important;
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 30px rgba(230, 195, 106, 0.4), 0 0 15px rgba(53, 211, 117, 0.3);
+}
+
+.btn-login:hover::before {
+    opacity: 1;
+}
+
+/* Infinite Light Sweep Animation on Hover */
+.btn-login:hover::after {
+    left: 140%;
+    transition: left 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Micro-interaction Push Behavior when Clicked */
+.btn-login:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 4px 10px rgba(53, 211, 117, 0.2);
+}
+
+/* Custom Text Sparkle inside Button */
+.btn-login span {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+   
+
+/* ==============================================================   
+            REGISTRATION START  
+   ==============================================================  */
+
+ :root {
+            --brand-dark: #0F1520;      /* Background Base Matrix */
+            --brand-surface: #151D2A;   /* Layer Node Panel */
+            --brand-gold: #E6C36A;      /* Premium Luxury Gold */
+            --brand-green: #35D375;     /* System Logo Cyber Green */
+            --brand-muted: #8A99AD;     /* Technical Subtitles Label */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--brand-dark);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: 
+                radial-gradient(circle at 5% 10%, rgba(230, 195, 106, 0.04) 0%, transparent 45%),
+                radial-gradient(circle at 95% 90%, rgba(53, 211, 117, 0.04) 0%, transparent 45%);
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphic Node Panel Configuration */
+        .register-card {
+            background: rgba(21, 29, 42, 0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px); /* Safari support patch */
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-top: 3px solid var(--brand-green);
+            border-radius: 28px;
+            padding: 2.5rem;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 50px rgba(53, 211, 117, 0.02);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            max-width: 850px;
+            width: 100%;
+        }
+
+        .register-card:hover {
+            border-top-color: var(--brand-gold);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.65), 0 0 50px rgba(230, 195, 106, 0.04);
+        }
+
+        /* Bootstrap v5.3.1 Input Form Elements Custom Reset */
+        .form-label {
+            font-size: 10px;
+            font-family: monospace;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--brand-muted);
+            margin-bottom: 0.45rem;
+        }
+
+        .input-group-text {
+            background-color: rgba(15, 21, 32, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            color: var(--brand-muted);
+            border-radius: 12px 0 0 12px;
+        }
+
+        .form-control, .form-select {
+            background-color: rgba(15, 21, 32, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            color: #ffffff !important;
+            border-radius: 12px;
+            font-size: 13.5px;
+            padding: 0.65rem 1rem;
+            transition: all 0.2s ease;
+        }
+
+        /* Active tracking focus state built specifically for Bootstrap 5 inputs */
+        .form-control:focus, .form-select:focus {
+            background-color: rgba(15, 21, 32, 0.9);
+            border-color: rgba(53, 211, 117, 0.4);
+            box-shadow: 0 0 12px rgba(53, 211, 117, 0.08);
+        }
+
+        .form-select option {
+            background-color: var(--brand-surface);
+            color: white;
+        }
+
+        .has-left-icon .form-control, .has-left-icon .form-select {
+            border-radius: 0 12px 12px 0;
+        }
+
+        /* Alphanumeric Captcha Box Security Layer */
+        .captcha-box {
+            background: #000000;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 900;
+            font-size: 20px;
+            letter-spacing: 5px;
+            padding: 0.5rem 1.2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+            user-select: none;
+        }
+
+        /* ==========================================================================
+           ULTRA-PREMIUM KINETIC REGISTRATION CTA BUTTON (WOW EFFECT)
+           ========================================================================== */
+        .btn-register {
+            position: relative;
+            background: linear-gradient(135deg, var(--brand-green) 0%, #10b981 50%, var(--brand-gold) 100%);
+            background-size: 200% auto;
+            color: #000000 !important;
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 14px;
+            padding: 0.85rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 20px rgba(53, 211, 117, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+        }
+
+        .btn-register:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 30px rgba(230, 195, 106, 0.4), 0 0 15px rgba(53, 211, 117, 0.3);
+        }
+
+        .btn-register::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -60%; width: 30%; height: 200%;
+            background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+            transform: rotate(25deg);
+        }
+
+        .btn-register:hover::after {
+            left: 140%;
+            transition: left 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn-register:active {
+            transform: translateY(1px) scale(0.98);
+        }
